@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container{
+    max-width: 1400px;
+    margin:  0 auto;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.content{
+    background: rgb(166,103,233);
+background: radial-gradient(circle, rgba(166,103,233,1) 0%, rgba(104,95,223,1) 100%);
+height: 617px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.left{
+    margin-left: -85px;
+    margin-top: 40px;
+}
+.blocks{
+  background-color: white;
+  width: 1000px;
+  height: 500px;
+  border-radius: 26px;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 100px;
 }
 
-.App-link {
-  color: #61dafb;
+.right{
+    width: 400px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.block,.block .con{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 2px solid gray;
+    margin-bottom: 10px;
+}
+.right h1{
+    font-weight: 500;
+    font-size: 28px;
+}
+.block .con{
+    border: none;
+}
+.con p{
+    color: black;
+}
+.block p{
+  color: #393939;
+  font-weight: 500;
+}
+.block:nth-child(3){
+    display: block;
+    /* border-bottom: 2px solid #000; */
+}
+
+
+
+@media only screen and (min-width:480px) and (max-width:640px){
+    .blocks{
+        flex-wrap: wrap;
+        padding: 20px 0;
+        height: auto;
+        width: auto;
+        margin: 0 20px;
+        gap: 10px;
+    }
+    .left{
+        display: block;
+        margin: -240px auto 0 auto;
+    }
+    .content{
+        height: auto;
+        padding-top: 300px;
+    }
+
+    .right{
+        width: auto;
+        margin: 0 20px;
+    }
+    .right h1{
+        display: flex;
+        justify-content: center;
+    }
 }
